@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Enter to Newline",
+  "version": "1.0.0",
+  "description": "Enter inserts a newline instead of sending. Use Ctrl+Enter (or Cmd+Enter) to send.",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://claude.ai/*",
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
